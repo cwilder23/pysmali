@@ -16,7 +16,14 @@ If you run into a smali file that does not parse or unparse properly, please sub
 
 * Python 3.8 or newer
 
-## Installation
+## Issues, Solutions, and Modifications
+
+__modified by:__ `cwilder`
+
+* Updated `__init__.py` to ignore the missing `VERSION` file in the deployed python module.
+  * __TODO:__ Include the VERSION file in the wheel package.
+
+* ## Installation
 
 ```bash
 pip install smali
@@ -102,3 +109,17 @@ Smali files used as tests in the `tests/tests.tar.xz` archive have been obtained
 - JavaX
 - OkHttp
 - Smali
+
+
+## Build and install from source
+
+Clean
+```bash
+python3 setup.py bdist_wheel clean
+rm -fr dist build
+```
+
+Run the following command build a wheel package
+```bash
+python3 setup.py bdist_wheel build
+```
