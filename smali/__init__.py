@@ -9,7 +9,7 @@ try:
         __version__ = f.read()
 except Exception as ex:
     __version__ = "0.2.5"
-    print(f"Warning: Missing '{os.path.join(os.path.dirname(__file__), '..', 'VERSION')}", ex)
+    print(f"Warning: Missing {os.path.join(os.path.dirname(__file__), '..', 'VERSION')}", ex)
 
 from smali.smali_file import SmaliFile
 
